@@ -41,20 +41,30 @@
     }
 }
 
-.product{
-    padding: 105px 0 120px;
-    text-align: center;
-    &__items{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 45px 30px;
+@media (max-width: 1050px){
+    .video-fashion{
+        &__inner{
+            display: block;
+        }
+        &__popup{
+            max-width: 100%;
+            background-position: center top;
+        }
+        &__content{
+            max-width: 100%;
+        }
     }
-    &__link{
-        text-transform: uppercase;
-        color: $title;
-        display: inline-block;
-        border: 1px solid $accent;
-        padding: 14px 27px;
-        margin-top: 55px;
+}
+
+@media (max-width: 620px){
+    .video-fashion{
+        padding: 60px 0;
+        &__popup{
+            height: 270px;
+        }
+        &__subtitle{
+            padding-top: 40px;
+            font-size: 18px;
+        }
     }
 }
